@@ -1,0 +1,47 @@
+.anchor-link-holder {
+    position: relative;
+    width: 100%;
+    height: 1px;
+
+    @include media("<desktop") {
+      display: none;
+    }
+}
+
+.anchor-link {
+  z-index: 50;
+  position: absolute;
+  bottom: 3rem;
+  right: 4rem;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 0.2rem solid $success-color;
+  width: 3.5rem;
+  height: 3.5rem;
+  color: $success-color;
+  background: $white-color;
+
+  @include media(">=tablet") {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  @include media(">=full") {
+    width: 6.5rem;
+    height: 6.5rem;
+    right: 2rem;
+    bottom: 6rem;
+  }
+
+  
+  &._alt {
+    position: fixed;
+  }
+
+  [class^="icon-"] {
+    font-size: 3rem;
+  }
+}
